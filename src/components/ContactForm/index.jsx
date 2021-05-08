@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/actions';
 import shortid from 'shortid';
 import useStyles from './styles';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 const ContactForm = () => {
   const classes = useStyles();
@@ -57,6 +58,7 @@ const ContactForm = () => {
       </label>
       <button className={classes.btn} type="submit">
         Add contact
+        <PersonAddIcon style={{ color: 'white' }} />
       </button>
     </form>
   );

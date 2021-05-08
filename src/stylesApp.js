@@ -23,6 +23,11 @@ const useStyles = createUseStyles({
     color: '#fff',
     backgroundColor: 'mediumpurple',
   },
+
+  icon: {
+    marginLeft: 15,
+  },
+
   main: {
     padding: 30,
     textAlign: 'center',

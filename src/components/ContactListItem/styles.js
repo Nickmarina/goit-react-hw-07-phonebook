@@ -12,7 +12,6 @@ const useStyles = createUseStyles({
   },
   btn: {
     borderRadius: '50%',
-    color: 'maroon',
     backgroundColor: 'thistle',
   },
 });

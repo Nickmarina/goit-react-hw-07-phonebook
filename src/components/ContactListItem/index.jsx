@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/actions';
 import useStyles from './styles';
+import PersonAddDisabledIcon from '@material-ui/icons/PersonAddDisabled';
 
 const getItem = id => state => state.items.find(item => item.id === id);
 
@@ -15,7 +16,7 @@ const ContactListItem = ({ id }) => {
     <li className={classes.item} key={id}>
       {name}: <span className={classes.span}>{number}</span>
       <button className={classes.btn} type="button" onClick={HandleDeleting}>
-        X
+        <PersonAddDisabledIcon fontSize="small" />
       </button>
     </li>
   );

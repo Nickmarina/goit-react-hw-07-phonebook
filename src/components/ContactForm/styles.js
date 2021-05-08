@@ -25,10 +25,12 @@ const useStyles = createUseStyles({
     padding: 5,
   },
   btn: {
-    width: 150,
+    width: 100,
     marginLeft: 'auto',
     marginRight: 'auto',
     padding: 5,
+    borderRadius: '10%',
+    color: 'white',
     backgroundColor: 'thistle',
   },
 });
