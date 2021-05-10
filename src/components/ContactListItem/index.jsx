@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/actions';
+import { deleteContact } from '../../redux/contacts-operations';
 import useStyles from './styles';
 import PersonAddDisabledIcon from '@material-ui/icons/PersonAddDisabled';
 
@@ -10,7 +10,7 @@ const ContactListItem = ({ id }) => {
   const { name, number } = useSelector(getItem(id));
   console.log(id);
   const dispatch = useDispatch();
-  const HandleDeleting = () => dispatch(deleteContact({ id }));
+  const HandleDeleting = () => dispatch(deleteContact(id));
 
   return (
     <li className={classes.item} key={id}>

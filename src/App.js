@@ -1,11 +1,17 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList';
 import Filter from './components/Filter';
 import useStyles from './stylesApp';
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
+import { getContacts } from './redux/contacts-operations';
 
 const App = () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+
+  useEffect(() => dispatch(getContacts()), [dispatch]);
 
   return (
     <div className={classes.container}>

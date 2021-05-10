@@ -3,7 +3,6 @@ import useStyles from './styles';
 import ContactListItem from '../ContactListItem';
 
 // const getContacts = state => state.items;
-
 const filteredContacts = state => {
   const normalizedContact = state.filter.toLowerCase();
   return state.items.filter(contact =>
