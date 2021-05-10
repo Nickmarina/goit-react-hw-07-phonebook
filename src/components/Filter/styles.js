@@ -12,6 +12,9 @@ const useStyles = createUseStyles({
     marginBottom: 25,
     textAlign: 'center',
   },
+  text: {
+    color: 'gray',
+  },
 });
 
 export default useStyles;

@@ -2,13 +2,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/contacts-operations';
 import useStyles from './styles';
 import PersonAddDisabledIcon from '@material-ui/icons/PersonAddDisabled';
-
-const getItem = id => state => state.items.find(item => item.id === id);
+import { getContactById } from '../../redux/contacts-selectors';
 
 const ContactListItem = ({ id }) => {
   const classes = useStyles();
-  const { name, number } = useSelector(getItem(id));
-  console.log(id);
+  const contacts = useSelector(getContactById(id));
+  const { name, number } = contacts;
   const dispatch = useDispatch();
   const HandleDeleting = () => dispatch(deleteContact(id));
 
